@@ -17,6 +17,10 @@ class AES256:
 
 
     def decrypt(self, ciphertext, key):
+        if key == None or key == "":
+            raise ValueError("Key cannot be null or empty")
+        if ciphertext == None or ciphertext == "":
+            raise ValueError("Ciphertext cannot be null or empty")
         print(ciphertext)
         print(key)
 
